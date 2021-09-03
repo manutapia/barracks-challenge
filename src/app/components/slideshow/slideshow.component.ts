@@ -46,7 +46,6 @@ export class SlideshowComponent implements OnInit, AfterViewInit, OnDestroy {
     this.swiper.slidePrev();
   }
   onSlideNext() {
-    console.log('NEXT');
     this.swiper.slideNext();
   }
 }

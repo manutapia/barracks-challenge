@@ -24,7 +24,6 @@ export class NasaService {
       .get<ApodResponse[]>(environment.APOD_URL_API, { params })
       .pipe(
         map((res) => {
-          console.log('SERVICE: ', res);
           return res.map((item) => {
             return {
               title: `${item.title} / ${item.date}`,

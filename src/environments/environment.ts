@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   BARRACKS_URL_API: '/v2',
   APOD_URL_API: 'https://api.nasa.gov/planetary/apod',
+  POKEMON_URL_API: 'https://pokeapi.co/api/v2',
 };
 
 /*

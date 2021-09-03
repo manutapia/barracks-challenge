@@ -12,6 +12,30 @@
     background: #F2F2F2;
 }
 
+.data-section .logout-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.data-section .logout-container .logout-button {
+    width: 139px;
+    height: 40px;
+    background-color: #E02020;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #F2F2F2;
+}
+
+.data-section .logout-container .logout-button:hover {
+    color: #fff;
+    background-color: #ff2828;
+    cursor: pointer;
+}
+
 .data-section .token-container {
     background: #3E3E3E;
     border: 1px solid #FFFFFF;

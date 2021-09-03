@@ -1,1 +1,10 @@
-<p>pokemon works!</p>
+<div class="pokemon-container">
+    <select class="poke-select" [formControl]="urlPokemonSelected" (change)="viewPokemon()">
+      <option value="">Seleccionar pokémon</option>
+      <option *ngFor="let pokemon of pokemonList" [value]="pokemon.url">{{pokemon.name}}</option>
+    </select>
+
+    <div class="img-container">
+        <img [src]="urlPokemonSprite">
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -9,9 +10,17 @@ import { AuthService } from 'src/app/services/auth.service';
 export class DataComponent implements OnInit {
   public token: string;
 
-  constructor(private _authService: AuthService) {
+  constructor(private _authService: AuthService, private router: Router) {
     this.token = this._authService.getToken() as string;
   }
 
   ngOnInit(): void {}
+
+  logout() {
+    this._authService.logout().subscribe((ok) => {
+      if (ok) {
+        this.router.navigateByUrl('/');
+      }
+    });
+  }
 }

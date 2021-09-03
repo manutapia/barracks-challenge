@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   login() {
     this._authService
       .login(this.form.value as AuthCredentials)
-      .subscribe((token: string) => {
+      .subscribe((token: string | null) => {
         if (token === null) return;
         this._authService.saveToken(token).subscribe((ok: boolean) => {
           if (ok) {

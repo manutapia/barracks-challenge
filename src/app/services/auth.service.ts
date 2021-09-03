@@ -14,7 +14,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(credentials: AuthCredentials): Observable<any> {
+  login(credentials: AuthCredentials): Observable<string | null> {
     return this.http
       .post<AuthResponse>(
         `${environment.BARRACKS_URL_API}/Auth/Authenticate`,
@@ -29,6 +29,11 @@ export class AuthService {
           return of(null);
         })
       );
+  }
+
+  logout(): Observable<boolean> {
+    localStorage.removeItem(this.nameLocalStorageItem);
+    return of(true);
   }
 
   saveToken(token: string): Observable<boolean> {

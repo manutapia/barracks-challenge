@@ -1,0 +1,26 @@
+.pokemon-container {
+    display: grid;
+    justify-content: center;
+}
+
+.poke-select {
+    padding: 10px 20px;
+    border-radius: 6px;
+    line-height: 12px;
+    border: 1px solid #ccc;
+    color: white;
+    background-color: #2C167A;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.img-container {
+    display: block;
+    width: 320px;
+}
+
+.img-container img {
+    display: absolute;
+    width: 100%;
+}

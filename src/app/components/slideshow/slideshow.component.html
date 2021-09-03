@@ -1,0 +1,16 @@
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" *ngFor="let slide of slides" [ngStyle]="{'background-size': 'cover','background-image': 'url('+slide.imgUrl+')'}">
+            <div class="slide-info" [ngClass]="{'slide-noimage': !slide.imgUrl}">
+                <p class="title">{{ slide.title }}</p>
+                <p class="description">{{ (slide.description | slice:0:50)}}{{(slide.description.length > 50)?'...':''}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+    <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+    <div (click)="onSlideNext()" class="swiper-button-next"></div>
+
+</div>

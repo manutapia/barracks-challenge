@@ -1,0 +1,11 @@
+<div class="login-page">
+    <div class="layer"></div>
+    <div class="login-container">
+        <div class="title">Login</div>
+        <div [formGroup]="form">
+            <input class="input-credential" type="text" placeholder="Usuario" formControlName="mail">
+            <input class="input-credential" type="password" placeholder="Constraseña" formControlName="password">
+        </div>
+        <button class="submit-button" type="submit" (click)="login()">Ingresar</button>
+    </div>
+</div>
